@@ -1,0 +1,798 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffaf5;
+    color: #3b2418;
+    line-height: 1.6;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #3b2418;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+
+    max-width: 1150px;
+
+    min-height: 70px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    font-weight: bold;
+}
+
+
+/* NAVIGATION */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+
+    color: #f2c49b;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 620px;
+
+    padding: 70px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f6dfc9,
+            #fffaf5
+        );
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+}
+
+
+.welcome {
+
+    letter-spacing: 3px;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+
+    color: #9a5d32;
+}
+
+
+.hero h1 {
+
+    font-family: Georgia, serif;
+
+    font-size:
+        clamp(3.5rem, 8vw, 6.5rem);
+
+    line-height: 1;
+
+    margin: 15px 0 25px;
+}
+
+
+.hero-text {
+
+    font-size: 1.25rem;
+
+    color: #6b4a38;
+
+    max-width: 550px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+/* COFFEE ICON */
+
+.coffee-icon {
+
+    width: 310px;
+
+    height: 310px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 9rem;
+
+    background: #e8c19f;
+
+    box-shadow:
+        0 25px 60px
+        rgba(80, 40, 10, 0.18);
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 13px 22px;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+.primary {
+
+    background: #6f3e20;
+
+    color: white;
+}
+
+
+.secondary {
+
+    background: #e5b58c;
+
+    color: #3b2418;
+}
+
+
+.danger {
+
+    background: #b74c42;
+
+    color: white;
+}
+
+
+.full {
+
+    width: 100%;
+}
+
+
+/* ================= SECTION ================= */
+
+.section {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 90px 22px;
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.section-heading h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 2.6rem;
+
+    margin-top: 5px;
+}
+
+
+/* ================= MENU ================= */
+
+.menu-container {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+}
+
+
+.menu-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(73, 39, 20, 0.09);
+}
+
+
+.menu-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 1.7rem;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid #ead8c9;
+}
+
+
+.menu-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid #f0e5dc;
+}
+
+
+.menu-item:last-child {
+
+    border-bottom: none;
+}
+
+
+.menu-item strong {
+
+    display: block;
+}
+
+
+.price {
+
+    color: #8a4e28;
+
+    font-weight: bold;
+}
+
+
+.small-order {
+
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #f2dfcf;
+
+    color: #5c331d;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* ================= ORDER ================= */
+
+.order-container {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+}
+
+
+.order-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(73, 39, 20, 0.09);
+}
+
+
+.order-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 1.6rem;
+
+    margin-bottom: 20px;
+}
+
+
+label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin:
+        15px 0 7px;
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid #d8c5b5;
+
+    border-radius: 9px;
+
+    background: #fffdfb;
+
+    color: #3b2418;
+
+    font-size: 1rem;
+}
+
+
+#cart-empty {
+
+    color: #8b7669;
+
+    padding: 15px 0;
+}
+
+
+/* CART ROW */
+
+.cart-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto auto;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom:
+        1px solid #eaded5;
+}
+
+
+.remove-btn {
+
+    border: none;
+
+    background: transparent;
+
+    color: #b74c42;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 20px 0;
+
+    padding-top: 15px;
+
+    border-top:
+        2px solid #d8c5b5;
+
+    font-size: 1.15rem;
+}
+
+
+/* ================= BILL ================= */
+
+.bill-section {
+
+    max-width: 800px;
+}
+
+
+.bill-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    min-height: 280px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(73, 39, 20, 0.09);
+}
+
+
+.bill-placeholder {
+
+    min-height: 220px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: #8b7669;
+}
+
+
+.receipt-icon {
+
+    font-size: 3.5rem;
+
+    margin-bottom: 15px;
+}
+
+
+/* RECEIPT HEADER */
+
+.receipt-header {
+
+    text-align: center;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        2px dashed #cbb7a7;
+}
+
+
+.receipt-header h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 2rem;
+}
+
+
+/* RECEIPT INFORMATION */
+
+.receipt-info {
+
+    padding: 18px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* TABLE */
+
+.receipt-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.receipt-table th,
+.receipt-table td {
+
+    text-align: left;
+
+    padding: 10px 5px;
+
+    border-bottom:
+        1px solid #eaded5;
+}
+
+
+.receipt-table th:last-child,
+.receipt-table td:last-child {
+
+    text-align: right;
+}
+
+
+/* RECEIPT TOTAL */
+
+.receipt-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    font-size: 1.35rem;
+
+    font-weight: bold;
+}
+
+
+/* BILL BUTTONS */
+
+.bill-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #3b2418;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+footer h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 5px;
+}
+
+
+.copyright {
+
+    margin-top: 10px;
+
+    font-size: 0.85rem;
+
+    opacity: 0.7;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 760px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        padding: 15px;
+
+        gap: 10px;
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+
+        font-size: 0.9rem;
+    }
+
+
+    .hero {
+
+        min-height: 550px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+
+    .hero-text {
+
+        margin: auto;
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .coffee-icon {
+
+        display: none;
+    }
+
+
+    .menu-container,
+    .order-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 2.1rem;
+    }
+
+
+    .receipt-info {
+
+        flex-direction: column;
+    }
+
+
+    .bill-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .bill-buttons .btn {
+
+        width: 100%;
+    }
+}
+
+
+/* ================= PRINT ================= */
+
+@media print {
+
+    body * {
+
+        visibility: hidden;
+    }
+
+
+    #bill-card,
+    #bill-card * {
+
+        visibility: visible;
+    }
+
+
+    #bill-card {
+
+        position: absolute;
+
+        left: 0;
+
+        top: 0;
+
+        width: 100%;
+
+        box-shadow: none;
+    }
+}
